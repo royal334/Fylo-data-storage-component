@@ -1,0 +1,146 @@
+:root{
+     --Pale-Blue: hsl(243, 100%, 93%);
+     --Grayish-Blue: hsl(229, 7%, 55%);
+     --Dark-Blue: hsl(228, 56%, 26%);
+     --Very-Dark-Blue: hsl(229, 57%, 11%);
+     --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+body{background-color: var(--Very-Dark-Blue);
+     overflow: hidden;
+    
+}
+
+.background-image1{position: absolute;
+               top:50%;
+               width: 100vw;
+               height: 50vh;
+}
+
+.container{
+     display: flex;
+     position: absolute;
+     top:50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 650px;
+     height: auto;
+     gap: 20px;
+}
+
+p{color: var(--Pale-Blue);
+     font-family: "Raleway";
+     font-size: 14px;
+}
+
+.fylo{height: 9.2rem;
+     width:30%;
+     background-color: var(--Dark-Blue);
+     border-radius: 5px 70px 5px 5px;
+     padding: 15px 120px 30px 15px;
+}
+
+.logo{position: absolute;
+     top:30px;
+}
+
+.icons{display: flex;
+     position: absolute;
+     top:95px;
+     justify-content: space-between;
+     width: 150px;
+}
+
+.icon-document, .icon-folder, .icon-upload{
+     background-color: var(--Very-Dark-Blue);
+     padding: 8px;
+     border-radius: 10px;
+    
+}
+
+.storage{width: 70%;
+     background-color: var(--Dark-Blue);
+     margin-top: 7%;
+     padding: 15px 15px 15px 15px;
+     border-radius: 10px;
+}
+
+.left{background-color: white;
+     clip-path: polygon(0 0, 83% 0, 83% 75%, 82% 94%, 66% 77%, 0 77%);
+     display: flex;
+     align-items: center;
+     gap:5px;
+     width: 150px;
+     height: 70px;
+     border-radius: 10px ;
+     position: absolute;
+     left: 78%;
+     bottom: 55%;
+}
+
+.big{color: black;
+     font-family: "Raleway";
+     font-size: 25px;
+     font-weight: 400;     
+}
+
+.GB{font-family: "Raleway";}
+
+.bar{height: 10px;
+     display: flex;
+}
+
+.left-bar{
+     background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%) );
+     width: 81.5%;
+     border-radius: 10px;
+     display: flex;
+     justify-content: flex-end;
+}
+
+.circle{background-color: white;
+          height: 10px;
+          width: 4%;
+          border-radius: 50%;
+}
+
+.right-bar{background-color: black;
+     opacity: 35%;     
+     width: 18.5%;
+     border-radius: 0 10px 10px 0;
+}
+
+.sizes{display: flex;
+     justify-content: space-between;
+         
+}
+
+.gb{margin-top: 5px;
+     margin-bottom: 0;
+}
+
+
+
+@media(max-width:560px){
+     body{background-image: url(./images/bg-mobile.png);
+         width: 100vw;
+         
+     }
+     .container{
+          display: flex;
+          flex-direction: column;
+          width: 90vw;
+          gap: 2px;
+         
+     }
+     .fylo{width: 57vw;}
+
+     .storage{width: 82vw;}
+
+     .left{
+          clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          position: absolute;
+          top:95%;
+          left:30%;
+     }
+}
